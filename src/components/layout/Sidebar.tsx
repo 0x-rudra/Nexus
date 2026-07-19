@@ -7,7 +7,7 @@ import { NavLink } from 'react-router-dom';
 
 export const Sidebar: React.FC = () => {
   const { setFocusMode, tasks } = useTaskStore();
-  
+
   const completedCount = tasks.filter(t => t.status === 'completed').length;
   const pendingCount = tasks.length - completedCount;
 
@@ -20,7 +20,7 @@ export const Sidebar: React.FC = () => {
           </div>
           <h1 className="text-xl font-extrabold tracking-tight bg-gradient-to-r from-foreground to-foreground/70 bg-clip-text text-transparent">Nexus Tasks</h1>
         </div>
-        
+
         <nav className="space-y-1.5">
           <SidebarItem icon={<LayoutDashboard size={18} />} label="Dashboard" to="/dashboard" />
           <SidebarItem icon={<ListTodo size={18} />} label="Tasks" to="/tasks" />
